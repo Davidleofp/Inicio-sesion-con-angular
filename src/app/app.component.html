@@ -1,0 +1,24 @@
+﻿<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark px-3" *ngIf="user">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a>
+        <a class="nav-item nav-link" routerLink="/users" routerLinkActive="active">Usuarios</a>
+        <button class="btn btn-link nav-item nav-link" (click)="logout()">Desconectarse</button>
+    </div>
+</nav>
+
+<!-- main app container -->
+<div class="app-container" [ngClass]="{ 'bg-light': user }">
+    <alert></alert>
+    <router-outlet></router-outlet>
+</div>
+
+<!-- credits -->
+<div class="text-center mt-4">
+    <p>
+        <a href="poner aqui el repositorio" target="_top">Inicio de sesion con angular</a>
+    </p>
+    <p>
+        <a href="poner el pensum" target="_top">Modelos de programacion ll</a>
+    </p>
+</div>
